@@ -1,0 +1,66 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-buttons slot="start">
+      <ion-button class="backbtn" routerLink="/tabs/tab1" routerDirection="back">
+        <ion-icon name="chevron-back-outline"></ion-icon>
+        Back
+      </ion-button>
+    </ion-buttons>
+    <ion-title>Blocklist</ion-title>
+    <ion-buttons slot="end">
+      <ion-button routerLink="/tabs/tab1" routerDirection="back">Done</ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blocklist</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+<div class="ion-padding">
+  
+  <ion-segment value="Apps" (ionChange)="segmentChanged($event)">
+    <ion-segment-button value="Apps">
+      <ion-label>Apps</ion-label>
+    </ion-segment-button>
+    <ion-segment-button value="Websites">
+      <ion-label>Websites</ion-label>
+    </ion-segment-button>
+  </ion-segment>
+
+</div>
+
+<ion-content *ngIf="selectedSegment === 'Apps'">
+
+  <ion-searchbar animated placeholder="Search apps"></ion-searchbar>
+
+  <ion-list>
+    <ion-item *ngFor="let entry of form">
+      <ion-icon name="logo-{{entry.val}}" style="margin-right: 15px;"></ion-icon>
+      <ion-label class="item-label">
+        {{entry.val}}
+      </ion-label>
+      <ion-checkbox slot="start" [(ngModel)]="entry.isChecked"></ion-checkbox>
+    </ion-item>
+  </ion-list>
+
+</ion-content>
+
+<ion-content *ngIf="selectedSegment === 'Websites'">
+
+  <ion-searchbar animated placeholder="Search website"></ion-searchbar>
+
+  <ion-card>
+    <ion-toolbar>
+      <ion-input placeholder="e.g. facebook.com" style="margin-left: 10px;"></ion-input>
+      <ion-buttons slot="end">
+        <ion-button>Add</ion-button>
+      </ion-buttons>
+    </ion-toolbar>
+  </ion-card>
+</ion-content>
+
+</ion-content>

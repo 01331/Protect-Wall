@@ -12,6 +12,10 @@ const routes: Routes = [
   {
     path: '',
     loadChildren: () => import('./tabs/tabs.module').then(m => m.TabsPageModule)
+  },
+  {
+    path: 'blocklist',
+    loadChildren: () => import('./blocklist/blocklist.module').then( m => m.BlocklistPageModule)
   }
 ];
 @NgModule({
