@@ -24,7 +24,19 @@ export class BlocklistPage implements OnInit {
     { val: 'Tiktok', isChecked: false },
     { val: 'Instagram', isChecked: false },
     { val: 'Snapchat', isChecked: false },
-    { val: 'Discord', isChecked: false },
+    { val: 'Youtube', isChecked: false },
+    { val: 'Reddit', isChecked: false },
+    { val: 'Google', isChecked: false },
+    { val: 'Github', isChecked: false },
+    { val: 'Laravel', isChecked: false },
+    { val: 'Skype', isChecked: false },
+    { val: 'WeChat', isChecked: false },
+    { val: 'Windows', isChecked: false },
+    { val: 'WhatsApp', Checked: false },
+    { val: 'Yen', isChecked: false },
+    { val: 'Playstation', isChecked: false },
+    { val: 'Vercel', isChecked: false },
+    { val: 'Paypal', isChecked: false },
   ];
 
 }

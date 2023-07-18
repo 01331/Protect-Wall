@@ -44,10 +44,10 @@
             </ion-card-content>
           </ion-card>
           
-          <ion-card class="card" *ngIf="selectedCondition === 'timer'" (click)='presentActionSheet1()'  style="margin: 10px 0px 0px;">
+          <ion-card class="card" *ngIf="selectedCondition === 'timer'" style="margin: 10px 0px 0px;">
             <ion-card-content style="padding: 0px;">
               <ion-list lines="none" style="margin: 0px; padding: 0px;">
-                <ion-item button>
+                <ion-item button (click)='presentActionSheet1()'>
                   <ion-icon name="hourglass-outline" slot="start"></ion-icon>
                   <ion-label style="font-weight: 500;">Timer</ion-label>
                 </ion-item>

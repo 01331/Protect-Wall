@@ -8,12 +8,13 @@ import { BlocklistPageRoutingModule } from './blocklist-routing.module';
 
 import { BlocklistPage } from './blocklist.page';
 
+
 @NgModule({
   imports: [
     CommonModule,
     FormsModule,
     IonicModule,
-    BlocklistPageRoutingModule
+    BlocklistPageRoutingModule,
   ],
   declarations: [BlocklistPage]
 })
