@@ -16,6 +16,18 @@ const routes: Routes = [
   {
     path: 'blocklist',
     loadChildren: () => import('./blocklist/blocklist.module').then( m => m.BlocklistPageModule)
+  },
+  {
+    path: 'settings',
+    loadChildren: () => import('./settings/settings.module').then( m => m.SettingsPageModule)
+  },
+  {
+    path: 'help-page',
+    loadChildren: () => import('./help-page/help-page.module').then( m => m.HelpPagePageModule)
+  },
+  {
+    path: 'about-page',
+    loadChildren: () => import('./about-page/about-page.module').then( m => m.AboutPagePageModule)
   }
 ];
 @NgModule({
